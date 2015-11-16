@@ -20,6 +20,15 @@ require(
   ["dependencies", "authentication"], 
   function(dependencies, auth) {
 
+    console.log("weseeyou");
+      var myFirebaseRef = new Firebase("https://lampgroupproject.firebaseio.com/");
+      console.log("myFirebaseRef", myFirebaseRef);
+      myFirebaseRef.child("DealBreakers").on("value", function(snapshot) {
+      var DealBreakers = snapshot.val();
+      console.log("DealBreakers Object", DealBreakers);
+
+
+
 //     /*
 //       You can choose to use the REST methods to interact with
 //       Firebase, or you can use the Firebase API with event
@@ -29,5 +38,5 @@ require(
 //       named `potential-mates.js`, and `add-favorite.js`.
 //      */
     
-//   }
-// );
+  }
+)});
