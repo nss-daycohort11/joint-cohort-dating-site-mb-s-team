@@ -5,16 +5,36 @@ require.config({
     'lodash': '../lib/bower_components/lodash/lodash.min',
     'hbs': '../lib/bower_components/require-handlebars-plugin/hbs',
     'q': '../lib/bower_components/q/q',
-    'bootstrap': '../lib/bower_components/bootstrap/dist/js/bootstrap.min'
+    'bootstrap': '../lib/bower_components/bootstrap/dist/js/bootstrap.min',
+    "firebase": "../lib/bower_components/firebase/firebase"
   },
   shim: {
-    'bootstrap': ['jquery']
+    'bootstrap': ['jquery'],
+    "firebase": {
+        exports: "Firebase"
+      }
   }
 });
 
 require(
-  ["dependencies"], 
-  function(_$_) {
+  ["dependencies", "firebase"], 
+  function(_$_, Firebase) {
+      console.log("weseeyou");
+    var myFirebaseRef = new Firebase("https://lampgroupproject.firebaseio.com/DealBreakers");
+      console.log("myFirebaseRef", myFirebaseRef);
+      myFirebaseRef.child("Cat").on("value", function(snapshot) {
+    var Cat = snapshot.val();
+     console.log("Cat", Cat);
+
+  })
+});
+
+    // var myFirebaseRef = new Firebase("https://lampgroupproject.firebaseio.com/DealBreakers");
+    //  myFirebaseRef.on("value", function(snapshot) {
+    //    arrayOfDealBreakers = [];
+    //    var DealBreakers = snapshot.val();
+    //    $("#popDBs").html(templates.DealBreakers(arrayOfDealBreakers));
+ 
 
     /*
       You can choose to use the REST methods to interact with
@@ -24,6 +44,4 @@ require(
       If you choose the former, I created two boilerplate modules
       named `potential-mates.js`, and `add-favorite.js`.
      */
-    
-  }
-);
+ 
