@@ -4,7 +4,7 @@ define(function(require) {
   // This function should return a promise
   function() {
     $.ajax({
-      url: "your dating Firebase URL here"
+      url: "https://lampgroupproject.firebaseio.com/"
     })
     .done(function(response) {
       // Resolve the promise
