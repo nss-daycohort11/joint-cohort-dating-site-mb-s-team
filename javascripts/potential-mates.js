@@ -1,5 +1,6 @@
-define(function(require) {
-  var q = require("q");
+// define(function(require) {
+//   var q = require("q");
+
 
   // This function should return a promise
   function() {
@@ -15,3 +16,4 @@ define(function(require) {
     }
   };
 });
+
