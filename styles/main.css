@@ -1,16 +1,18 @@
 ********* HEADER *************
-header {
+#nav-header {
   background-color: #FFB4B0;
   padding: 15px;
-  display: block; }
+  display: block;
+  background-color: blue; }
 
 header nav div {
   display: inline-block;
   padding: 0px 20px; }
 
-********* Rows *************
-.row {
-  border: 2px solid black;
-  padding: 25px; }
+#dealbreakersDiv {
+  background-color: blue; }
+
+#profileView {
+  background-color: pink; }
 
 /*# sourceMappingURL=main.css.map */
