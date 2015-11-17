@@ -1,5 +1,8 @@
 
-********* HEADER *************
+@font-face {
+ font-family:oldStamp;
+ src: url("styles/fonts/oldStamper.ttf");
+} 
 
 #nav-header {
   background-color: #FFB4B0;
@@ -13,12 +16,46 @@ header nav div {
   padding: 0px 20px; 
 }
 
-
-#dealbreakersDiv {
-	background-color: blue;
+img {
+	width: 100%;
+	align: center;	
 }
 
-#profileView {
-	background-color: pink;
+
+.realImage {
+	width: 100%;
+}
+
+.dBTxtDiv {
+	size: 50%;
+}
+
+.textDiv {
+position: relative;
+}
+
+.imgDiv {
+position: absolute;
+}
+
+.dealbreakerText {
+	
+	transform: rotate(335deg);
+	color: red;
+	font-family: oldStamp;
+	font-size: 3em;
+	margin-top: 20% 
+}
+
+.center {
+	align: center;
+}
+
+button {
+	margin: 0px 37.5%;
+}
+
+.row {
+	margin: 2% 0%;
 }
 
