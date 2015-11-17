@@ -1,7 +1,7 @@
 {{#each things}}
-  <div id="row2" class="row">
-    <div id="id6" class="tileContent col-sm-12">
-    {{picture}}
-    </div>
-  </div>  <!-- this is the closing div to #row2-->
+  <div class="tileContent">
+  	<img src="{{picture}}" class="realImage">
+  	<p class="dealBreakerOverlay {{display}}">Dealbreaker!</p>
+    <button class="dealBreakerBtn">Dealbreaker</button>
+  </div>
 {{/each}}
