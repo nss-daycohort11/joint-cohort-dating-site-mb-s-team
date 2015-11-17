@@ -11,85 +11,66 @@
 </head>
 
 <body>
-	<div class="container-fluid">
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1636662123260939',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
  	 <!--  NAV BAR -->
-  		<div class="row">
-    		<header id="nav-header" class="navbar">
-     			<nav class="nav nav-pills">
-        			<div>
-          				<a id="homePage" href="#">Dealbreakers</a>
-        			</div>
-       				<div>
-          				<a id="profile" href="#">Profile</a>
-        			</div>
-      			</nav>
-   			</header> 
-  		</div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">DealBreakers</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Profile<span class="sr-only">(current)</span></a></li>
+        <li><a href="/dealbreakers.html">Modify DealBreakers</a></li>
+        <li><a href="/matches.html">Matches</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
   <!--  log-in (initial) view -->
 
-        
-	    <!--  list dealbreakers (home page) -->
-	    <div id="dealbreakersDiv"> 
-	        <div id="row1" class="row">
-	            <div id="id1" class="tileContent col-sm-4">
-		        	<img src="#" id="id1Img">
-		            <textarea>Ew</textarea>
-		        </div>
-		        <div id="id2" class="tileContent col-sm-4">
-		            <img src="#" id="id2Img">
-		            <textarea>Ew</textarea>
-		        </div>
-		        <div id="id3" class="tileContent col-sm-4">
-		          	<img src="#" id="id3Img">
-		          	<textarea>Ew</textarea>
-		      	</div>
-		    </div>	<!-- this is the closing div to #row1-->
+ 	<div id="loginPage">
+	<div>
+		<img src="images/dealbreaker.jpg">
+	</div>
+	<div>
+		<span id="userDoesntExist">Account does not exist!</span>
+		<button id="login" class="btn">Login</button><br>
+		<span id="userExists">User already exists. Please, Sign Up!</span><br>
+		<button id="newUser" class="btn">Sign Up</button>
+	</div>
+	<div class="container-fluid">
 
-		    <div id="row2" class="row">
-	          	<div id="id4" class="tileContent col-sm-4">
-		          	<img src="#" id="id4Img">
-		         	<textarea>Ew</textarea>
-		      	</div>
-		     	<div id="id5" class="tileContent col-sm-4">
-		         	<img src="#" id="id5Img">
-		         	<textarea>Ew</textarea>
-		      	</div>
-		    	<div id="id6" class="tileContent col-sm-4">
-		     	    <img src="#" id="id6Img">
-		          	<textarea>Ew</textarea>
-		      	</div>
-		    </div>	<!-- this is the closing div to #row2-->
-		</div>	<!-- this is the closing div to #dealbreakersDiv-->
 
-	<!--  profile view -->   
 
-		<div id="profileView">
-			<div id="aboutMe" class="row">
-				<div id="myProfPicDiv" class="col-sm-4">
-					<img src="#" id="myProfPic">
-				</div>
-				<div id="myDislikes" class="col-sm-8">
-					<textarea>My dislikes go here</textarea>
-				</div>
-			</div>
-			<div id="myMatches" class="row">
-				<div id="matchesRow1" class="row">
-					<div id="match1" class="matchesTile col-sm-4">
-						<img src="#">
-						<textarea>My match dislikes these things too!</textarea>
-					</div>
-					<div id="match2" class="matchesTile col-sm-4">
-						<img src="#">
-						<textarea>My match dislikes these things too!</textarea>
-					</div>
-					<div id="match3" class="matchesTile col-sm-4">
-						<img src="#">
-						<textarea>My match dislikes these things too!</textarea>
-					</div>	
-				</div>
-			</div>
-		</div>  
-	</div> <!-- this is the closing div to .containerfluid-->
+
     <script data-main="javascripts/dating-site" src="lib/bower_components/requirejs/require.js"></script>
   </body>
 </html>
