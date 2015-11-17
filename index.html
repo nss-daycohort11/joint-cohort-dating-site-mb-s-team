@@ -1,38 +1,104 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Deal Breakers</title>
-
-  <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
-
-  <link rel="stylesheet" type="text/css" href="sass/main.scss">
-
-</head>
 
 <body>
   <h1>Deal Breakers</h1>
   <div id="popDBs"></div>
   
-
-
-
-
-
-
-
-
-
-
-
-
   <script data-main="javascripts/dating-site" src="lib/bower_components/requirejs/require.js"></script>
 
-</body>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dealbreaker</title>
+	<link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+ 	 <!--  NAV BAR -->
+  		<div class="row">
+    		<header id="nav-header" class="navbar">
+     			<nav class="nav nav-pills">
+        			<div>
+          				<a id="homePage" href="#">Dealbreakers</a>
+        			</div>
+       				<div>
+          				<a id="profile" href="#">Profile</a>
+        			</div>
+      			</nav>
+   			</header> 
+  		</div>
+  <!--  log-in (initial) view -->
+
+        
+	    <!--  list dealbreakers (home page) -->
+	    <div id="dealbreakersDiv"> 
+	        <div id="row1" class="row">
+	            <div id="id1" class="tileContent col-sm-4">
+		        	<img src="#" id="id1Img">
+		            <textarea>Ew</textarea>
+		        </div>
+		        <div id="id2" class="tileContent col-sm-4">
+		            <img src="#" id="id2Img">
+		            <textarea>Ew</textarea>
+		        </div>
+		        <div id="id3" class="tileContent col-sm-4">
+		          	<img src="#" id="id3Img">
+		          	<textarea>Ew</textarea>
+		      	</div>
+		    </div>	<!-- this is the closing div to #row1-->
+
+		    <div id="row2" class="row">
+	          	<div id="id4" class="tileContent col-sm-4">
+		          	<img src="#" id="id4Img">
+		         	<textarea>Ew</textarea>
+		      	</div>
+		     	<div id="id5" class="tileContent col-sm-4">
+		         	<img src="#" id="id5Img">
+		         	<textarea>Ew</textarea>
+		      	</div>
+		    	<div id="id6" class="tileContent col-sm-4">
+		     	    <img src="#" id="id6Img">
+		          	<textarea>Ew</textarea>
+		      	</div>
+		    </div>	<!-- this is the closing div to #row2-->
+		</div>	<!-- this is the closing div to #dealbreakersDiv-->
+
+
+	<!--  profile view -->   
+
+		<div id="profileView">
+			<div id="aboutMe" class="row">
+				<div id="myProfPicDiv" class="col-sm-4">
+					<img src="#" id="myProfPic">
+				</div>
+				<div id="myDislikes" class="col-sm-8">
+					<textarea>My dislikes go here</textarea>
+				</div>
+			</div>
+			<div id="myMatches" class="row">
+				<div id="matchesRow1" class="row">
+					<div id="match1" class="matchesTile col-sm-4">
+						<img src="#">
+						<textarea>My match dislikes these things too!</textarea>
+					</div>
+					<div id="match2" class="matchesTile col-sm-4">
+						<img src="#">
+						<textarea>My match dislikes these things too!</textarea>
+					</div>
+					<div id="match3" class="matchesTile col-sm-4">
+						<img src="#">
+						<textarea>My match dislikes these things too!</textarea>
+					</div>	
+				</div>
+			</div>
+		</div>  
+	</div> <!-- this is the closing div to .containerfluid-->
+    <script data-main="javascripts/dating-site" src="lib/bower_components/requirejs/require.js"></script>
+  </body>
 </html>
-
-
-
 
 

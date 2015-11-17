@@ -2,6 +2,7 @@ require.config({
   baseUrl: './javascripts',
   paths: {
     'jquery': '../lib/bower_components/jquery/dist/jquery.min',
+    'firebase': '../lib/bower_components/firebase/firebase',
     'lodash': '../lib/bower_components/lodash/lodash.min',
     'hbs': '../lib/bower_components/require-handlebars-plugin/hbs',
     'q': '../lib/bower_components/q/q',
@@ -10,6 +11,7 @@ require.config({
   },
   shim: {
     'bootstrap': ['jquery'],
+
     "firebase": {
         exports: "Firebase"
       }
@@ -17,6 +19,7 @@ require.config({
 });
 
 require(
+
   ["dependencies", "firebase"], 
   function(_$_, Firebase) {
       console.log("weseeyou");
@@ -36,12 +39,31 @@ require(
     //    $("#popDBs").html(templates.DealBreakers(arrayOfDealBreakers));
  
 
-    /*
-      You can choose to use the REST methods to interact with
-      Firebase, or you can use the Firebase API with event
-      listeners. It's completely up to each team.
+  ["dependencies", "authentication"], 
+  function(dependencies, auth) {
 
-      If you choose the former, I created two boilerplate modules
-      named `potential-mates.js`, and `add-favorite.js`.
-     */
+
+    console.log("weseeyou");
+      var myFirebaseRef = new Firebase("https://lampgroupproject.firebaseio.com/");
+      console.log("myFirebaseRef", myFirebaseRef);
+      myFirebaseRef.child("DealBreakers").on("value", function(snapshot) {
+      var DealBreakers = snapshot.val();
+      console.log("DealBreakers Object", DealBreakers);
+
+
  
+
+
+
+//     /*
+//       You can choose to use the REST methods to interact with
+//       Firebase, or you can use the Firebase API with event
+//       listeners. It's completely up to each team.
+
+//       If you choose the former, I created two boilerplate modules
+//       named `potential-mates.js`, and `add-favorite.js`.
+//      */
+    
+  }
+)};
+
