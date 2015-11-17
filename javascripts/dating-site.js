@@ -25,7 +25,13 @@ require(
       console.log("myFirebaseRef", myFirebaseRef);
       myFirebaseRef.child("DealBreakers").on("value", function(snapshot) {
       var DealBreakers = snapshot.val();
-      console.log("DealBreakers Object", DealBreakers);
+      console.log("DealBreakers Object", DealBreakers[1]);
+
+
+      var DealBreakersForDOM = [];
+
+       //var populatedTemplate = templates.(trips);
+      $("#dealBreakers").html(DealBreakers);
 
 
 
