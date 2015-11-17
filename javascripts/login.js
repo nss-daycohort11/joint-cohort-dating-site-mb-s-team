@@ -18,9 +18,9 @@ define(function(require) {
           console.log("Login Failed!", error);
         } else {
           console.log("Authenticated successfully with payload:", authData);
-          // uid.setUid(authData.uid);
-          // uid.setProfile(authData.github.profileImageURL);
-          // uid.setName(authData.github.displayName);
+          uid.setUid(authData.uid);
+          uid.setProfile(authData.github.profileImageURL);
+          uid.setName(authData.github.displayName);
 
           var usersFirebase = ref.child("users");
           var userExists = false;
@@ -51,10 +51,23 @@ define(function(require) {
         });
       });
 
-      // uid.setUid(authData.uid);
-      // uid.setProfile(authData.github.profileImageURL);
-      // uid.setName(authData.github.displayName);
+      uid.setUid(authData.uid);
+      uid.setProfile(authData.github.profileImageURL);
+      uid.setName(authData.github.displayName);
 
-    }
+    }       
+    // on page load modal loaded
+      if (authData.uid === null) {
+      $(document).ready(function(){
+          $('.modal-title').html("<h2>Please login?</h2>");
+          $("#modal-profile-btn").hide();
+          $('.modal-body').html(login());
+          $('#myModal').modal('show');
+          console.log("login modal");
+        });
+      } else {
+        console.log("Already logged in", authData);
+        console.log("Your UID is:", authData.uid);
+        }
   });
 });

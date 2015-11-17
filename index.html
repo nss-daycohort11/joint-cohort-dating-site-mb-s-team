@@ -37,14 +37,32 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="all-the-things"></div>
-
-
-<div>
-  <input type="text" placeholder="username">
-  <input type="password" placeholder="password">
-  <button id="login">Login</button>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Please Login with GitHub</h4>
+      </div>
+      <div class="modal-body">
+      <div>
+<!--         <input type="text" placeholder="username">
+        <input type="password" placeholder="password"> -->
+        <button id="login">Login</button>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+<div class="all-the-things">
+
 
     <script data-main="javascripts/dating-site" src="lib/bower_components/requirejs/require.js"></script>
   </body>
