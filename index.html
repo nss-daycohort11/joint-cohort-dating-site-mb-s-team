@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Dealbreaker</title>
 	<link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 
@@ -31,39 +32,70 @@
 	    <!--  list dealbreakers (home page) -->
 	    <div id="dealbreakersDiv"> 
 	        <div id="row1" class="row">
-	            <div id="id1" class="tileContent col-sm-4">
-		        	<img src="http://www.pet360.com/Content/Images/Cms/Articles/Happy_Cat_Smiling.jpg" id="id1Img">
-		            <textarea>Ew</textarea>
+	            <div id="id1" class="tileContent col-sm-4 center">
+		        	<div class="imgDiv">
+			        	<img src="images/hunting.gif" class="realImage">
+			        </div>
+			        <div class="textDiv">
+			        	<p class="dealbreakerText">Dealbreaker!</p>
+		        	</div>
 		        </div>
 		        <div id="id2" class="tileContent col-sm-4">
-		            <img src="#" id="id2Img">
-		            <textarea>Ew</textarea>
+		            <img src="images/halfMarathon.jpeg">
 		        </div>
 		        <div id="id3" class="tileContent col-sm-4">
-		          	<img src="#" id="id3Img">
-		          	<textarea>Ew</textarea>
+		          	<img src="images/kids.jpeg" id="id3Img">
 		      	</div>
 		    </div>	<!-- this is the closing div to #row1-->
-
+		    <div id="buttonRow1" class="row buttonRow">
+			    <div class="col-sm-4">	
+			    	<div class="row rowDiv">
+			            <button id="id1btn" class="btn col-sm-3 center">Ew</button>
+			        </div>
+			    </div>    
+			    <div class="col-sm-4">	
+			        <div class="row rowDiv">
+			            <button id="id2btn" class="btn col-sm-3 center">Ew</button>
+			        </div>
+			    </div>    
+			    <div class="col-sm-4">	
+			        <div class="row rowDiv">
+			            <button id="id3btn" class="btn col-sm-3 center">Ew</button>
+			        </div>
+				</div>
+		    </div>
 		    <div id="row2" class="row">
 	          	<div id="id4" class="tileContent col-sm-4">
-		          	<img src="#" id="id4Img">
-		         	<textarea>Ew</textarea>
+		          	<img src="images/veggies.jpg" id="id4Img">
 		      	</div>
 		     	<div id="id5" class="tileContent col-sm-4">
-		         	<img src="#" id="id5Img">
-		         	<textarea>Ew</textarea>
+		         	<img src="images/hilary.jpeg">
 		      	</div>
 		    	<div id="id6" class="tileContent col-sm-4">
-		     	    <img src="#" id="id6Img">
-		          	<textarea>Ew</textarea>
+		     	    <img src="images/cat.jpeg" id="id6Img">
 		      	</div>
 		    </div>	<!-- this is the closing div to #row2-->
+		    <div id="buttonRow2" class="row buttonRow">
+			    <div class="col-sm-4">	
+			    	<div class="row rowDiv">
+			            <button id="id4btn" class="btn col-sm-3 center">Ew</button>
+			        </div>
+			    </div>    
+			    <div class="col-sm-4">	
+			        <div class="row rowDiv">
+			            <button id="id5btn" class="btn col-sm-3 center">Ew</button>
+			        </div>
+			    </div>    
+			    <div class="col-sm-4">	
+			        <div class="row rowDiv">
+			            <button id="id6btn" class="btn col-sm-3 center">Ew</button>
+			        </div>
+				</div>
 		</div>	<!-- this is the closing div to #dealbreakersDiv-->
 
 	<!--  profile view -->   
 
-		<div id="profileView">
+		<div id="profileView" class="hidden">
 			<div id="aboutMe" class="row">
 				<div id="myProfPicDiv" class="col-sm-4">
 					<img src="#" id="myProfPic">
