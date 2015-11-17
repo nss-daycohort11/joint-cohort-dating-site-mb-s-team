@@ -20,8 +20,8 @@ require.config({
 
 require(
 
-  ["dependencies", "firebase"], 
-  function(_$_, Firebase) {
+  ["dependencies", "firebase", "login"], 
+  function(_$_, Firebase, Login) {
       console.log("weseeyou");
     var myFirebaseRef = new Firebase("https://lampgroupproject.firebaseio.com/DealBreakers");
       console.log("myFirebaseRef", myFirebaseRef);

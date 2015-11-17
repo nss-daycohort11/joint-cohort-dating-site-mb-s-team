@@ -1,10 +1,6 @@
 <!doctype html>
 
 <html lang="en">
-
-<body>
-  <h1>Deal Breakers</h1>
-  <div id="popDBs"></div>
   
   <script data-main="javascripts/dating-site" src="lib/bower_components/requirejs/require.js"></script>
 
@@ -18,117 +14,38 @@
 </head>
 
 <body>
-	<div class="container-fluid">
  	 <!--  NAV BAR -->
-  		<div class="row">
-    		<header id="nav-header" class="navbar">
-     			<nav class="nav nav-pills">
-        			<div>
-          				<a id="homePage" href="#">Dealbreakers</a>
-        			</div>
-       				<div>
-          				<a id="profile" href="#">Profile</a>
-        			</div>
-      			</nav>
-   			</header> 
-  		</div>
-  <!--  log-in (initial) view -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">DealBreakers</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/profile">Profile<span class="sr-only">(current)</span></a></li>
+        <li><a href="/dealbreakers">DealBreakers</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
-        
-	    <!--  list dealbreakers (home page) -->
-	    <div id="dealbreakersDiv"> 
-	        <div id="row1" class="row">
-	            <div id="id1" class="tileContent col-sm-4 center">
-		        	<div class="imgDiv">
-			        	<img src="images/hunting.gif" class="realImage">
-			        </div>
-			        <div class="textDiv">
-			        	<p class="dealbreakerText">Dealbreaker!</p>
-		        	</div>
-		        </div>
-		        <div id="id2" class="tileContent col-sm-4">
-		            <img src="images/halfMarathon.jpeg">
-		        </div>
-		        <div id="id3" class="tileContent col-sm-4">
-		          	<img src="images/kids.jpeg" id="id3Img">
-		      	</div>
-		    </div>	<!-- this is the closing div to #row1-->
-		    <div id="buttonRow1" class="row buttonRow">
-			    <div class="col-sm-4">	
-			    	<div class="row rowDiv">
-			            <button id="id1btn" class="btn col-sm-3 center">Ew</button>
-			        </div>
-			    </div>    
-			    <div class="col-sm-4">	
-			        <div class="row rowDiv">
-			            <button id="id2btn" class="btn col-sm-3 center">Ew</button>
-			        </div>
-			    </div>    
-			    <div class="col-sm-4">	
-			        <div class="row rowDiv">
-			            <button id="id3btn" class="btn col-sm-3 center">Ew</button>
-			        </div>
-				</div>
-		    </div>
-		    <div id="row2" class="row">
-	          	<div id="id4" class="tileContent col-sm-4">
-		          	<img src="images/veggies.jpg" id="id4Img">
-		      	</div>
-		     	<div id="id5" class="tileContent col-sm-4">
-		         	<img src="images/hilary.jpeg">
-		      	</div>
-		    	<div id="id6" class="tileContent col-sm-4">
-		     	    <img src="images/cat.jpeg" id="id6Img">
-		      	</div>
-		    </div>	<!-- this is the closing div to #row2-->
-		    <div id="buttonRow2" class="row buttonRow">
-			    <div class="col-sm-4">	
-			    	<div class="row rowDiv">
-			            <button id="id4btn" class="btn col-sm-3 center">Ew</button>
-			        </div>
-			    </div>    
-			    <div class="col-sm-4">	
-			        <div class="row rowDiv">
-			            <button id="id5btn" class="btn col-sm-3 center">Ew</button>
-			        </div>
-			    </div>    
-			    <div class="col-sm-4">	
-			        <div class="row rowDiv">
-			            <button id="id6btn" class="btn col-sm-3 center">Ew</button>
-			        </div>
-				</div>
-		</div>	<!-- this is the closing div to #dealbreakersDiv-->
+<div class="all-the-things"></div>
 
 
-	<!--  profile view -->   
+<div>
+  <input type="text" placeholder="username">
+  <input type="password" placeholder="password">
+  <button id="login">Login</button>
+</div>
 
-		<div id="profileView" class="hidden">
-			<div id="aboutMe" class="row">
-				<div id="myProfPicDiv" class="col-sm-4">
-					<img src="#" id="myProfPic">
-				</div>
-				<div id="myDislikes" class="col-sm-8">
-					<textarea>My dislikes go here</textarea>
-				</div>
-			</div>
-			<div id="myMatches" class="row">
-				<div id="matchesRow1" class="row">
-					<div id="match1" class="matchesTile col-sm-4">
-						<img src="#">
-						<textarea>My match dislikes these things too!</textarea>
-					</div>
-					<div id="match2" class="matchesTile col-sm-4">
-						<img src="#">
-						<textarea>My match dislikes these things too!</textarea>
-					</div>
-					<div id="match3" class="matchesTile col-sm-4">
-						<img src="#">
-						<textarea>My match dislikes these things too!</textarea>
-					</div>	
-				</div>
-			</div>
-		</div>  
-	</div> <!-- this is the closing div to .containerfluid-->
     <script data-main="javascripts/dating-site" src="lib/bower_components/requirejs/require.js"></script>
   </body>
 </html>
