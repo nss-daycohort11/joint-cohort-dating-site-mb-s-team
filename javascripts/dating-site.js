@@ -25,9 +25,9 @@ require(
       console.log("weseeyou");
     var myFirebaseRef = new Firebase("https://lampgroupproject.firebaseio.com/DealBreakers");
       console.log("myFirebaseRef", myFirebaseRef);
-      myFirebaseRef.child("Cat").on("value", function(snapshot) {
-    var Cat = snapshot.val();
-     console.log("Cat", Cat);
+      myFirebaseRef.child("ID:Dog").on("value", function(snapshot) {
+    var Dog = snapshot.child("ID:Dog").val();
+      console.log("Dog", Dog);
 
   })
 });
@@ -39,7 +39,7 @@ require(
     //    $("#popDBs").html(templates.DealBreakers(arrayOfDealBreakers));
  
 
-  ["dependencies", "authentication"], 
+  ["dependencies", "authentification"], 
   function(dependencies, auth) {
 
 
@@ -49,7 +49,9 @@ require(
       myFirebaseRef.child("DealBreakers").on("value", function(snapshot) {
       var DealBreakers = snapshot.val();
       console.log("DealBreakers Object", DealBreakers);
-
+    
+  }
+)};
 
  
 
@@ -64,6 +66,5 @@ require(
 //       named `potential-mates.js`, and `add-favorite.js`.
 //      */
     
-  }
-)};
+ 
 
