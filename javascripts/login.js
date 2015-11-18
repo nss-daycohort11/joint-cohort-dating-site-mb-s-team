@@ -8,11 +8,11 @@ define(function(require) {
   var ref = new Firebase("https://lampgroupproject.firebaseio.com/");
 
 //github authentication
-  $("#login").on("click", function(){
+  $("#login").on("click", function() {
     console.log("login clicked");
 
     var authData = ref.getAuth();
-    if (authData === null){
+    if (authData === null) {
       ref.authWithOAuthPopup("github", function(error, authData) {
         if (error) {
           console.log("Login Failed!", error);
@@ -30,6 +30,7 @@ define(function(require) {
                 userExists = true;
               }
             });
+
             if (userExists === false) {
               usersFirebase.push({uid:authData.uid});
             }
@@ -37,9 +38,10 @@ define(function(require) {
           });
         }
       },{ //session will expire upon browser shutdown
-        remember: "sessionOnly",
-        scope: "user,gist"
-      });
+          remember: "sessionOnly",
+          scope: "user,gist"
+        });
+
     } else {
       var thingsRef = new Firebase("https://lampgroupproject.firebaseio.com/DealBreakers");
       thingsRef.once("value", function(dataSnapshot) {
@@ -49,12 +51,12 @@ define(function(require) {
         require(["hbs!../templates/things"], function(tpl) {
           $(".all-the-things").html(tpl({ things:allThings }));
         });
+        $("#log-inDiv").addClass("hidden");
       });
 
       // uid.setUid(authData.uid);
       // uid.setProfile(authData.github.profileImageURL);
       // uid.setName(authData.github.displayName);
-
     }
   });
 });

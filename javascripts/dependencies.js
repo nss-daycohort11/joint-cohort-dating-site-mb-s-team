@@ -24,5 +24,4 @@ define(function(require) {
   var Login = require("login");
   var Overlay = require("overlay");
   var auth = require("authentication");
-  var dating_site = require("dating-site");
 });
