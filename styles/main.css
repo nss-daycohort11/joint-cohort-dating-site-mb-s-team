@@ -27,7 +27,7 @@ header div {
   font-size: 3em; }
 
 button {
-  display: block; }
+  display: inline-block; }
 
 .row {
   margin: 2% 0%; }

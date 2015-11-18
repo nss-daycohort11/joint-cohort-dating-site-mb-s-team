@@ -4,8 +4,9 @@
   		<img src="{{picture}}" class="realImage">
   	</div>
   	<div class="textDiv">
-  		<p class="dealBreakerOverlay {{display}}">Dealbreaker!</p>
+  		<p class="dealBreakerOverlay {{undo}}">Dealbreaker!</p>
   	</div>
-    <button class="dealBreakerBtn" id='{{@key}}''>Dealbreaker</button>
+    <button class="dealBreakerBtn {{dbButton}}" id='{{@key}}''>Dealbreaker</button>
+    <button class="undoBtn {{undo}}" id='{{@key}}''>Undo</button>
   </div>
 {{/each}}

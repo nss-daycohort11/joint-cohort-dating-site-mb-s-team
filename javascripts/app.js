@@ -4,15 +4,10 @@ define(function(require) {
   var Firebase = require("firebase");
   var $ = require("jquery");
   var b = require("bootstrap");
-  var h = require("hbs");
-  var Q = require("q");
-  var Login = require("login");
-  var Overlay = require("overlay");
-  var auth = require("authentication");
 
     // ******* navigation links *******//
 
-	// ******* dealbreakers view *******//
+	// *** dealbreakers view ***//
 	$("#dealbreakerTab").click(function() {
 		$("#profileView").addClass("hidden");
 		$("#profileView").removeClass("active");
@@ -21,6 +16,7 @@ define(function(require) {
 		$("#thingsView").removeClass("hidden");
 	});
 
+	// *** profile view ***//
 	$("#profileTab").click(function() {
 		$("#profileView").addClass("active");
 		$("#profileView").removeClass("hidden");
