@@ -13,41 +13,61 @@
   <body>
     <div class="container-fluid">
 
-     <!--  NAV BAR -->
-      <nav class="navbar navbar-default">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">DealBreakers</a>
+<!-- ******************* NAV BAR ******************* -->
+      <header id="navBar" class="navbar navbar-default hidden">
+        <nav class="nav nav-pills">
+          <div>
+            <a id="dealbreakerTab" href="#">.... My Dealbreakers</a>
           </div>
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="/profile">Profile<span class="sr-only">(current)</span></a></li>
-              <li><a href="/dealbreakers">DealBreakers</a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-      </nav>
-
-    <!--  Log-in Div -->
+          <div class="center">
+            <a id="profileTab" href="#">Profile</a>
+          </div>
+        </nav>
+      </header> 
+      
+<!-- ******************* Log-in View ******************* -->
       <div id="log-inDiv">
         <input type="text" placeholder="username">
         <input type="password" placeholder="password">
         <button id="login">Login</button>
       </div>
 
-      <!-- pick things Div -->
-      <div class="all-the-things"></div>
+<!-- *******************pick things View ******************* -->
+      <div id="thingsView" class="all-the-things hidden"></div>
       </div>
 
+<!-- ******************* Profile View ******************* -->
+      <div id="profileView" class="hidden">
+        <div id="aboutMe" class="row">
+          <div id="myProfPicDiv" class="col-sm-4">
+            <img src="#" id="myProfPic">
+          </div>
+          <div id="myDislikes" class="col-sm-8">
+            <textarea>My dislikes go here</textarea>
+          </div>
+        </div>
+        <div id="myMatches" class="row">
+          <div id="matchesRow1" class="row">
+            <div id="match1" class="matchesTile col-sm-4">
+              <img src="#">
+              <textarea>My match dislikes these things too!</textarea>
+            </div>
+            <div id="match2" class="matchesTile col-sm-4">
+              <img src="#">
+              <textarea>My match dislikes these things too!</textarea>
+            </div>
+            <div id="match3" class="matchesTile col-sm-4">
+              <img src="#">
+              <textarea>My match dislikes these things too!</textarea>
+            </div>   
+          </div>
+        </div>
+      </div> 
+
+<!-- ******************* Ending Tags ******************* -->
     </div> <!-- ending div to .container-fluid-->
-    <script data-main="javascripts/dependencies" src="lib/bower_components/requirejs/require.js"></script>
-    </body>
+  <script data-main="javascripts/dependencies" src="lib/bower_components/requirejs/require.js"></script>
+  </body>
 </html>
 
 

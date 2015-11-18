@@ -21,6 +21,7 @@ define(function(require) {
   var b = require("bootstrap");
   var h = require("hbs");
   var Q = require("q");
+  var app = require("app");
   var Login = require("login");
   var Overlay = require("overlay");
   var auth = require("authentication");

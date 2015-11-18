@@ -52,6 +52,11 @@ define(function(require) {
           $(".all-the-things").html(tpl({ things:allThings }));
         });
         $("#log-inDiv").addClass("hidden");
+        $("#thingsView").addClass("active");
+        $("#thingsView").removeClass("hidden");
+        $("#navBar").removeClass("hidden");
+        $("#navBar").addClass("active");
+
       });
 
       // uid.setUid(authData.uid);

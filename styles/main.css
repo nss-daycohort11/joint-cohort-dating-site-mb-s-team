@@ -1,3 +1,14 @@
+/********** navBar **************/
+/********** HEADER **************/
+header {
+  background-color: lightgray;
+  padding: 15px;
+  display: block; }
+
+header div {
+  display: inline-block;
+  padding: 0px 20px; }
+
 .realImage {
   width: 250px;
   height: 250px;
