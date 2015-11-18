@@ -1,7 +1,11 @@
 {{#each things}}
   <div class="tileContent">
-  	<img src="{{picture}}" class="realImage">
-  	<p class="dealBreakerOverlay {{display}}">Dealbreaker!</p>
-    <button class="dealBreakerBtn">Dealbreaker</button>
+  	<div class="imgDiv">
+  		<img src="{{picture}}" class="realImage">
+  	</div>
+  	<div class="textDiv">
+  		<p class="dealBreakerOverlay {{display}}">Dealbreaker!</p>
+  	</div>
+    <button class="dealBreakerBtn" id='{{@key}}''>Dealbreaker</button>
   </div>
 {{/each}}

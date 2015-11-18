@@ -8,6 +8,7 @@ requirejs.config({
 		"firebase" : "../lib/bower_components/firebase/firebase",
 		"lodash": "../lib/bower_components/lodash/lodash.min"
 	},
+
 	shim: {
 		"bootstrap": ["jquery"]
 	}
@@ -15,8 +16,13 @@ requirejs.config({
 
 //linking dependencies
 define(function(require) {
-  var firebase = require("firebase");
+  var Firebase = require("firebase");
   var $ = require("jquery");
   var b = require("bootstrap");
   var h = require("hbs");
+  var Q = require("q");
+  var Login = require("login");
+  var Overlay = require("overlay");
+  var auth = require("authentication");
+  var dating_site = require("dating-site");
 });

@@ -1,17 +1,30 @@
 .realImage {
   width: 250px;
-  height: 250px; }
+  height: 250px;
+  display: inline-block; }
+
+.textDiv {
+  position: absolute;
+  bottom: 7em; }
+
+.imgDiv {
+  position: relative; }
 
 .dealBreakerOverlay {
   transform: rotate(335deg);
   color: red;
-  font-size: 3em;
-  margin-top: 35%; }
+  font-size: 3em; }
 
 button {
-  margin: 0px 37.5%; }
+  display: block; }
 
 .row {
   margin: 2% 0%; }
+
+.tileContent {
+  display: inline-block;
+  margin: 2%;
+  border: 2px solid black;
+  position: relative; }
 
 /*# sourceMappingURL=main.css.map */
